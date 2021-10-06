@@ -1,0 +1,397 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(35deg, #8e2de2, #4a00e0);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: sans-serif;
+}
+
+.alura-logo {
+    width: 40px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    user-select: none;
+}
+
+.page-logo {
+    width: 200px;
+    user-select: none;
+    pointer-events: none;
+    position: absolute;
+    top: 250px
+}
+
+.nextGame {
+    display: none;
+}
+
+.menuprincipal {
+    display: block;
+}
+
+.GameArea {
+    display: none;
+}
+
+.menu {
+    position: relative;
+    background-color: white;
+    min-height: 300px;
+    min-width: 500px;
+    padding: 20px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
+}
+
+.menu label {
+    color: rgb(0, 0, 0);
+}
+
+.menuprincipal .menu #jogar {
+    position: relative;
+    top: 20px;
+    min-width: 100%;
+    min-height: 20px;
+    font-size: 60px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(35deg, #cf86ff, #5500ff);
+    color: white;
+    user-select: none;
+}
+
+.menu #jogar:hover {
+    background: linear-gradient(35deg, #8500dd, #8468bb);
+    color: #ffffff;
+}
+
+.menu #nickArea {
+    position: relative;
+    text-align: center;
+    top: 150px;
+}
+
+.menu h1 {
+    color: black;
+    text-align: center;
+    user-select: none;
+}
+
+.menu #linha {
+    content: '';
+    position: relative;
+    height: 2px;
+    width: 100%;
+    background-color: #4a00e0;
+    bottom: -2px;
+    animation: linhapassar 2s infinite alternate;
+}
+
+@keyframes linhapassar {
+    0% {
+        background: linear-gradient(35deg, #caa0ee, #ae92e6);
+    }
+    50% {
+        background: linear-gradient(50deg, #8800ff, #5500ff);
+    }
+    100% {
+        background: linear-gradient(90deg, #af53ff, #b38eff);
+    }
+}
+
+.menu #nickArea label {
+    position: relative;
+    font-size: 20px;
+    user-select: none;
+}
+
+.menu #nickArea input {
+    position: relative;
+    bottom: 70px;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    border: #4a00e0 #4a00e0;
+    background-color: #cccccc;
+    text-align: center;
+    color: black;
+}
+
+.menu #nickArea input::placeholder {
+    color: rgb(183, 0, 255);
+    font-size: 15px;
+}
+
+.menu #nickArea input:focus {
+    outline: none;
+}
+
+@keyframes playGame {
+    0% {
+        transform: scale(0)
+    }
+    50% {
+        transform: scale(0.9)
+    }
+    100% {
+        transform: scale(1)
+    }
+}
+
+.menuprincipal #dificuldadeInfo {
+    position: relative;
+    background-color: #b1b1b1;
+    height: 50px;
+    width: 310px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    left: 190px;
+    bottom: 85px;
+}
+
+.menuprincipal .dificuldadeArea #dificuldade {
+    position: relative;
+    bottom: 15px;
+    right: 90px;
+    min-height: 50px;
+    width: 190px;
+    text-align: center;
+}
+
+.menuprincipal .dificuldadeArea #dificuldade option:last-child {
+    color: white;
+    background-color: red;
+}
+
+.menuprincipal .dificuldadeArea label {
+    position: relative;
+    bottom: 50px;
+}
+
+.jogo {
+    position: flex;
+    background-color: white;
+    min-height: 500px;
+    min-width: 600px;
+    padding: 20px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
+    /*animation: playGame 4s; */
+}
+
+.jogo #divTentativas {
+    position: relative;
+    left: 80%;
+    background-color: #c2c2c2;
+    border-radius: 10px;
+    height: 90px;
+    width: 90px;
+    text-align: center;
+    user-select: none;
+}
+
+.jogo #divTentativas span {
+    position: relative;
+    color: black;
+    bottom: 10px;
+}
+
+.jogo #divTentativas #tentativasRestantes {
+    color: black;
+    position: relative;
+    bottom: 20px;
+    font-size: 30px;
+}
+
+.jogo #divTentativas #divDificuldade h1 {
+    color: rgb(0, 0, 0);
+    position: relative;
+    bottom: 10px;
+    font-size: 20px;
+}
+
+.jogo #divTitle {
+    color: black;
+    font-family: sans-serif;
+    position: relative;
+    font-size: 15px;
+    left: 20px;
+    top: 50px;
+    user-select: none;
+}
+
+.jogo #divHistorico #historicoTentativas {
+    position: relative;
+    bottom: 40px;
+    height: 100px;
+    width: 100%;
+    border: none;
+    background-color: #e2e2e2;
+    border-radius: 8px;
+    text-align: center;
+    user-select: none;
+}
+
+.GameArea #divHistorico h1 {
+    color: rgb(134, 134, 134);
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    top: 50px;
+    user-select: none;
+    visibility: hidden;
+}
+
+.GameArea #divHistorico p {
+    position: relative;
+    color: rgb(114, 114, 114);
+    z-index: 1;
+    bottom: 20px;
+    left: 10px;
+    font-weight: bold;
+    user-select: none;
+}
+
+.jogo #divTentativaInput {
+    position: relative;
+    top: 50px;
+}
+
+.jogo #divTentativaInput #chuteInt {
+    position: relative;
+    height: 30px;
+    width: 100%;
+    text-align: center;
+    border: none;
+    background-color: #b38eff;
+    border-radius: 10px;
+    bottom: 50px;
+    user-select: none;
+    color: white;
+}
+
+.jogo #divTentativaInput #chuteInt:hover {
+    background-color: #4a00e0;
+}
+
+.jogo #divTentativaInput #chuteInt::placeholder {
+    color: white;
+    font-size: 15px;
+}
+
+.jogo #divTentativaInput #chuteInt:focus {
+    outline: none;
+}
+
+.jogo #divTentativaInput label {
+    color: black;
+    position: relative;
+    bottom: 50px;
+    user-select: none;
+}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.jogo #divChutar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.jogo #divChutar #chutar {
+    position: relative;
+    top: 20px;
+    width: 100%;
+    height: 90px;
+    border: none;
+    background: linear-gradient(35deg, #cf86ff, #5500ff);
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+.jogo #divChutar #chutar:hover {
+    background: linear-gradient(35deg, #6401a7, #7032eb);
+    font-size: 30px;
+}
+
+#video {
+    position: absolute;
+    align-items: center;
+    bottom: 10px;
+}
+
+#video iframe {
+    border-radius: 8px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
+}
+
+#err {
+    display: block;
+    position: relative;
+    background-color: rebeccapurple;
+    min-width: 100%;
+    min-height: 50px;
+    bottom: 30px;
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.nextGame {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    min-height: 200px;
+    min-width: 600px;
+    padding: 20px;
+    border-radius: 30px;
+    border: none;
+    z-index: 5;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
+    top: 400px;
+}
+
+.nextGame button {
+    position: relative;
+    top: 100px;
+    width: 100%;
+    height: 70px;
+    border: none;
+    background: linear-gradient(35deg, #cf86ff, #5500ff);
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+.nextGame button:hover {
+    background: linear-gradient(35deg, #6401a7, #7032eb);
+    font-size: 30px;
+}
+
+.nextGame h1 {
+    position: relative;
+    color: black;
+    text-align: center;
+}

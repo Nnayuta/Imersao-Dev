@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(28deg, #8e2de2, #4a00e0);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+table{
+    margin-top: 10%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    padding: 10px;
+}
+
+tr{
+    text-align: center;
+}
+
+th {
+    border: solid 2px black;
+    padding: 5px 35px;
+    color: white;
+    background-color: blueviolet;
+    border-radius: 8px;
+}
+
+td {
+    border-radius: 8px;
+    border: solid 2px rgb(0, 0, 0);
+    padding: 3px 35px;
+    color: white;
+    background-color: #7640e0;
+    font-weight: bold;
+}
+
+#tdButtons{
+    display: flex;
+    justify-content: space-between;
+}
+
+#tdButtons button{
+    height: 70px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    background-color: #8e2de2;
+    border: solid 1px rgb(0, 0, 0);
+    margin-left: 10px;
+    color: white;
+    
+
+}
+
+/* AREA DE ADICIONAR JOGADOR */
+
+.addPlayer{
+    background-color: white;
+    padding: 8px;
+    border-radius: 8px;
+    position: absolute;
+}
+
+#profileImg{
+    position: relative;
+    width: 60px;
+    border-radius: 50px;
+    border: solid black 2px;
+    right: 30px;
+
+}

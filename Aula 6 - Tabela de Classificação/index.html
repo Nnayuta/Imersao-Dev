@@ -1,0 +1,41 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="addPlayer" id="addPlayer">
+        <form method="dialog" onsubmit="addNewPlayer()">
+            <div>
+                <label for="name">Nome</label>
+                <input type="text" name="name" id="name" required>
+                <label for="imgUrl">IMG</label>
+                <input type="url" name="profile" id="imgUrl" required>
+                <input type="submit" value="Add New Player">
+            </div>
+        </form>
+    </div>
+    <div id='main'>
+        <table id='playerTable'>
+            <tr>
+                <th>Nome</th>
+                <th>Vitórias</th>
+                <th>Empates</th>
+                <th>Derrotas</th>
+                <th>Pontos</th>
+                <th>Ações</th>
+            </tr>
+            <tbody id='tPlayers'>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

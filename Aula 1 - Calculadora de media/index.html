@@ -1,0 +1,59 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Imersão Dev Alura - Aula 01</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <a href="https://alura.com.br/" target="_blank"> <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo"></a>
+  <div id='calc'>
+    <div id='header'>
+      <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg" class="page-logo" alt="">
+      <h1>Calculadora de média</h1>
+      <p>Aula 1</p>
+    </div>
+    <div id='mediaselect'>
+      <span for='mediafinal'>Média necessaria para ser aprovada(o):</span>
+      <input type="number" max='10' min='0' step=".01" name="mediafinal" id="mediafinal" value="6" />
+      <div id='mediaalta'>Média muito alta!</div>
+    </div>
+    <form onsubmit="calcularMedia()" method="dialog">
+      <div class="alunoInfo">
+        <div>
+          <span for='name' id='spanName'>Nome da(o) aluna(o):</span>
+          <input type="text" name="name" id="name" required>
+        </div>
+        <div id='notas'>
+          <div>
+            <span>1ª Nota:</span>
+            <input type="number" max='10' min='0' step=".01" name="nota1" id="nota1" placeholder='Digite a primeira nota' required>
+          </div>
+          <div>
+            <span>2ª Nota:</span>
+            <input type="number" max='10' min='0' step=".01" name="nota2" id="nota2" placeholder='Digite a segunda nota' required>
+          </div>
+          <div>
+            <span>3ª Nota:</span>
+            <input type="number" max='10' min='0' step=".01" name="nota3" id="nota3" placeholder='Digite a terceira nota' required>
+          </div>
+          <div>
+            <span>4ª Nota:</span>
+            <input type="number" max='10' min='0' step=".01" name="nota4" id="nota4" placeholder='Digite a quarta nota' required>
+          </div>
+        </div>
+      </div>
+      <div>
+        <input type="submit" id='calcular' value="Calcular media">
+      </div>
+    </form>
+    <div id="resultado">
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>

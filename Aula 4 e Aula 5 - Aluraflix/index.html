@@ -1,0 +1,60 @@
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg"
+        class="page-logo" alt="">
+        <header>ISEKAIFLIX</header>
+        <ul>
+            <li><button onclick="adicionarMenu()">Adicionar</button></li>
+        </ul>
+        <div class="addAnime" id='addAnime'>
+            <form onsubmit="addAnime()" method="dialog" id='formAnime'>
+                <div>
+                    <h1>Novo anime</h1>
+                </div>
+                <div>
+                    <label for="animeNome">Anime:</label>
+                    <input type="text" name="animeNome" id="animeNome" required>
+                </div>
+                <div>
+                    <label id='sinopseLabel' for="sinopse">Sinopse:</label>
+                    <textarea required id='sinopse' name="" id="" cols="20" rows="10"></textarea>
+                </div>
+                <div>
+                    <label for="animeURL">AnimeURL</label>
+                    <input type="url" name="animeURL" id="animeURL" required>
+                </div>
+                <div>
+                    <p id='erroMsg'></p>
+                    <label for="src">imageURl:</label>
+                    <input type="url" name="src" id="src" onchange="loadImg()" required>
+                    <div>
+                        <img id="loadIMG" src="" alt="animeIMG">
+                    </div>
+                </div>
+                <input id='submit' type="submit" value="Adicionar">
+            </form>
+        </div>
+    </div>
+    <main>
+        <a href="https://alura.com.br/" target="_blank"> <img
+                src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo"></a>
+        <div>
+            <div class="animes" id='animes'>
+            </div>
+        </div>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

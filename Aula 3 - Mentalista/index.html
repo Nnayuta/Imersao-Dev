@@ -1,0 +1,94 @@
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerte o Numero</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <a href="https://alura.com.br/" target="_blank"> <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg"
+            alt="" class="alura-logo"></a>
+    <div id='header'>
+        <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg"
+            class="page-logo" alt="">
+    </div>
+    <div>
+        <div class='menuprincipal'>
+            <div class="menu">
+                <div>
+                    <h1>ACERTE O NÚMERO</h1>
+                    <div id='linha'></div>
+                </div>
+                <div>
+                    <button id='jogar' onclick="PlayButton()">JOGAR</button>
+                </div>
+                <div id='nickArea'>
+                    <label for="name">NICKNAME</label>
+                    <input type="text" name="name" id="name" placeholder="Digite seu nome">
+                </div>
+                <div class="dificuldadeArea">
+                    <label for="dificuldade">Dificuldade</label>
+                    <select name="dificuldade" id="dificuldade" onchange="selectDificuldade()">
+                        <option value="normal">Normal</option>
+                        <option value="medio">Medio</option>
+                        <option value="dificil">Dificil</option>
+                        <option value="superdificil">SUPER DIFICIL!</option>
+                    </select>
+                    <div id='dificuldadeInfo'>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nextGame" id='nextGame'>
+            <h1>CERTA RESPOSTA</h1>
+            <button onclick="ProximoGame()">PROXIMO</button>
+        </div>
+
+        <div class='GameArea'>
+            <div class="jogo">
+                <div id='divTitle'>
+                    <h1>CHUTE UM NUMERO DE 0 A 10</h1>
+                </div>
+                <div id='divTentativas'>
+                    <div id='divDificuldade'>
+                        <h1>NORMAL</h1>
+                    </div>
+                    <span>Tentativas Restantes</span>
+                    <p id='tentativasRestantes'>0</p>
+                </div>
+                <div id='divHistorico'>
+                    <h1 id="nDisponivel">NÃO DISPONIVEL</h1>
+                    <p>Historico</p>
+                    <input type="text" name="historicoTentativas" id="historicoTentativas" disabled>
+                </div>
+                <div id='err'>
+                </div>
+                <form onsubmit="chutarNumero()" method="dialog">
+                    <div id='divTentativaInput'>
+                        <label for="chuteint">Digite seu Chute:</label>
+                        <input required type="number" name="chuteint" id="chuteInt"
+                            placeholder="Digite um numero entre 0 e 10">
+                    </div>
+                    <div id='divChutar'>
+                        <input type="submit" value="Chutar" id='chutar'>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--
+    <div id='video'>
+        <iframe width="360" height="100" src="https://www.youtube.com/embed/5qap5aO4i9A?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+        -->
+    <script src="index.js"></script>
+
+</body>
+
+</html>
